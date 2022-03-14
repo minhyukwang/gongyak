@@ -4,3 +4,4 @@
 # NODE JS Module , install using npm command in the terminal
 node_modules/
 
+.env/
