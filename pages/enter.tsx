@@ -10,7 +10,7 @@ const Enter: NextPage = () => {
   const onPhoneClick = () => setMethod("phone");
   return (
     <div className="mt-16 px-4">
-      <h3 className="text-3xl font-bold text-center">Mojon de Mojon</h3>
+      <h3 className="text-3xl font-bold text-center">Pledge</h3>
       <div className="mt-12">
         <div className="flex flex-col items-center">
           <h5 className="text-sm text-gray-500 font-medium">Enter using:</h5>
