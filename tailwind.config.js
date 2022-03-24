@@ -4,11 +4,7 @@ module.exports = {
     "./components/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
-    extend: {
-      colors: {
-        "navy-peony": "#233B5D",
-      },
-    },
+    extend: {},
   },
   darkMode: "media",
   plugins: [require("@tailwindcss/forms")],
