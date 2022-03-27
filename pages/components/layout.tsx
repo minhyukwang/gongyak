@@ -26,7 +26,7 @@ export default function Layout({
   return (
     <div>
       <Head>
-        <title>{seoTitle} | Mojong </title>
+        <title>{seoTitle} | Pledge </title>
       </Head>
       <div className={cls(
           !canGoBack ? "justify-center" : "",
