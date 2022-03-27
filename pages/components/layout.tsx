@@ -3,6 +3,7 @@ import Link from "next/link";
 import { cls } from '../libs/utils';
 import { useRouter } from "next/router";
 import Head from "next/head";
+import Image from 'next/image'
 
 interface LayoutProps {
   title?: string;
@@ -28,9 +29,43 @@ export default function Layout({
       <Head>
         <title>{seoTitle} | Pledge </title>
       </Head>
+      {/* 상단 왼쪽 image 넣기 
+          오르쪽 상단 글쓰기 버튼 image 넣기 
+          오른쪽 채팅 버튼 image 넣기 
+      */}
       <div className={cls(
-          !canGoBack ? "justify-center" : "",
-          "bg-white w-full h-12 max-w-xl text-lg px-10 font-medium  fixed text-gray-800 border-b top-0  flex items-center")}>
+          !canGoBack ? "" : "",
+          "bg-white w-full h-12 max-w-xl text-lg px-2 font-medium fixed text-gray-800  flex items-center")}>
+        {!canGoBack ? (
+          <div className="-mt-7">
+          <button onClick={onClick} className="absolute right-14">
+          <svg className="w-7 h-7" 
+          fill="none" 
+          stroke="currentColor"
+          viewBox="0 0 24 24" 
+          xmlns="http://www.w3.org/2000/svg">
+            <path strokeLinecap="round"
+             strokeLinejoin="round" 
+             strokeWidth="2" d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+          </button>
+          <button onClick={onClick} className="absolute right-4">
+            <svg 
+            transform="rotate(45)"
+            className="w-6 h-6" 
+            fill="none" 
+            stroke="navy" 
+            viewBox="0 0 24 24" 
+            xmlns="http://www.w3.org/2000/svg">
+              <path 
+              strokeLinecap="round" 
+              strokeLinejoin="round" 
+              strokeWidth="2" 
+              d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8">
+                </path>
+                </svg>
+          </button>
+          </div>
+        ) : null}    
         {canGoBack ? (
           <button onClick={onClick} className="absolute left-4">
             <svg
@@ -50,7 +85,13 @@ export default function Layout({
           </button>
         ) : null}
         {title ? (
-          <span className={cls(canGoBack ? "mx-auto" : "", "")}>{title}</span>
+          <span className={cls(canGoBack ? "mx-auto" : "", "")}>{title === "pledge"? (
+          <div className="mt-2"><Image
+          src="/pledge.png"
+          alt="Picture of the author"
+          width={90}
+          height={40}
+        /></div>) : title}</span>
         ) : null}
       </div>
       <div className={cls("pt-12", hasTabBar ? "pb-24" : "")}>{children}</div>
