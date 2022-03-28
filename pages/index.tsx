@@ -1,18 +1,18 @@
 import type { NextPage } from "next";
 import FloatingButton from "./components/floating-button";
-import Item from "./components/item";
+import TimeLine from "./components/timeline";
 import Layout from "./components/layout";
 
 const Home: NextPage = () => {
   return (
     <Layout title="pledge" hasTabBar>
-      <div className="flex items-center justify-center">
-        <div className="w-10 h-10 bg-slate-500 rounded-full" />
+      <div className="mt-4 flex items-center justify-center">
+        <div className="w-10 h-10 bg-slate-500 rounded-full ring ring-slate-800 ring-offset-2 " />
       </div>
       <div className="flex items-center justify-center mt-4">
         <div className="w-80 h-24 bg-slate-800 rounded-md ">
         
-        <div className="ml-[140px] -mt-2 w-2 h-2 border-t-[8px] border-t-transparent border-b-[6px] border-b-transparent border-r-[16px] border-r-slate-800">
+        <div className="ml-[140px] -mt-2 w-2 h-2 border-t-[8px] border-t-transparent border-b-[6px] border-b-transparent border-r-[16px] border-r-slate-800 ">
           </div>
         <div className="flex flex-col -space-y-1 items-center justify-center">
         {[1, 1, 1, 1].map((_, i) => (
@@ -25,12 +25,13 @@ const Home: NextPage = () => {
       </div>
       <div className="flex flex-col space-y-5">
         {[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1].map((_, i) => (
-          <Item
+          <TimeLine
             id={i}
             key={i}
-            title="iPhone 14"
-            price={99}
-            comments={1}
+            title="뿌뿌"
+            content={"일주일 동안 매일 물 400ml 마시기"}
+            userId={"@bboo.oodd"}
+            comment={"달성하지 못하였습니다🙂"}
             hearts={1}
           />
         ))}
