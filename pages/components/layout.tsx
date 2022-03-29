@@ -107,7 +107,7 @@ export default function Layout({
               )}
             >
               <svg
-                className="w-6 h-6"
+                className="w-7 h-7"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -133,7 +133,7 @@ export default function Layout({
               )}
             >
               <svg 
-              className="w-6 h-6" 
+              className="w-7 h-7" 
               fill="none" 
               stroke="currentColor" 
               viewBox="0 0 24 24" 
@@ -148,17 +148,17 @@ export default function Layout({
               {/* <span>검색</span> */}
             </a>
           </Link>
-          <Link href="/chats">
+          <Link href="/list">
             <a
               className={cls(
                 "flex flex-col items-center space-y-2 ",
-                router.pathname === "/chats"
+                router.pathname === "/list"
                   ? "text-slate-900"
                   : "hover:text-gray-500 transition-colors"
               )}
             >
               <svg
-              className="w-6 h-6" 
+              className="w-7 h-7" 
               fill="none" 
               stroke="currentColor" 
               viewBox="0 0 24 24" 
@@ -183,7 +183,7 @@ export default function Layout({
               )}
             >
               <svg
-                className="w-6 h-6"
+                className="w-7 h-7"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
