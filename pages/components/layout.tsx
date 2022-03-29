@@ -102,7 +102,7 @@ export default function Layout({
               className={cls(
                 "flex flex-col items-center space-y-2 ",
                 router.pathname === "/"
-                  ? "text-green-600"
+                  ? "text-slate-900"
                   : "hover:text-gray-500 transition-colors"
               )}
             >
@@ -128,23 +128,23 @@ export default function Layout({
               className={cls(
                 "flex flex-col items-center space-y-2 ",
                 router.pathname === "/community"
-                  ? "text-green-600"
+                  ? "text-slate-900"
                   : "hover:text-gray-500 transition-colors"
               )}
             >
-             <svg 
-             className="w-6 h-6" 
-             fill="none" 
-             stroke="currentColor" 
-             viewBox="0 0 24 24" 
-             xmlns="http://www.w3.org/2000/svg">
-               <path 
-               strokeLinecap="round" 
-               strokeLinejoin="round" 
-               strokeWidth="2" 
-               d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z">
-                 </path>
-                 </svg>
+              <svg 
+              className="w-6 h-6" 
+              fill="none" 
+              stroke="currentColor" 
+              viewBox="0 0 24 24" 
+              xmlns="http://www.w3.org/2000/svg">
+              <path 
+              strokeLinecap="round" 
+              strokeLinejoin="round" 
+              strokeWidth="2" 
+              d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z">
+                </path>
+              </svg>
               {/* <span>검색</span> */}
             </a>
           </Link>
@@ -153,7 +153,7 @@ export default function Layout({
               className={cls(
                 "flex flex-col items-center space-y-2 ",
                 router.pathname === "/chats"
-                  ? "text-green-600"
+                  ? "text-slate-900"
                   : "hover:text-gray-500 transition-colors"
               )}
             >
@@ -178,7 +178,7 @@ export default function Layout({
               className={cls(
                 "flex flex-col items-center space-y-2 ",
                 router.pathname === "/profile"
-                  ? "text-green-600"
+                  ? "text-slate-900"
                   : "hover:text-gray-500 transition-colors"
               )}
             >

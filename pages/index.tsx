@@ -31,7 +31,7 @@ const Home: NextPage = () => {
             title="뿌뿌"
             content={"일주일 동안 매일 물 400ml 마시기"}
             userId={"@bboo.oodd"}
-            comment={"달성하지 못하였습니다🙂"}
+            comment={"new🎉"}
             hearts={1}
           />
         ))}
