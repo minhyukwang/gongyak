@@ -79,7 +79,7 @@ const List: NextPage = () => {
 {/*           {method === "doing" ? <p>doing</p> : null}
           {method === "done" ? (<p>done</p>) : null} */}
         </div>
-      <FloatingButton href="/community/write">
+      <FloatingButton href="/list/write">
       <svg
             className="h-6 w-6"
             xmlns="http://www.w3.org/2000/svg"
