@@ -17,8 +17,8 @@ interface TextAreaProps {
         ) : null}
         <textarea
           id={name}
-          className="mt-1 shadow-sm w-full focus:ring-green-600 rounded-md border-gray-300 focus:border-green-600 "
-          rows={4}
+          className="mt-1 shadow-sm w-full focus:ring-slate-600 rounded-md border-gray-300 focus:border-slate-600 "
+          rows={1}
           {...rest}
         />
       </div>

@@ -45,23 +45,36 @@ const List: NextPage = () => {
                 동네질문
               </span> */}
               <div className="mt-2 px-4 flex flex-row text-slate-800">
-                <div className="w-8 h-8 bg-slate-400 rounded-full"></div> 
-                What is
-                the best mandu restaurant?
+                <div className="w-8 h-8 bg-slate-400 rounded-full"></div>
+                <span className="mt-1 ml-2 font-bold text-slate-800">인영</span>                    
+                <span className="mt-2.5 ml-1 text-xs text-slate-400">님 과의</span>
+                <span className="mt-1 ml-1.5 font-medium">약속에 늦지 않기</span>
               </div>
-              <div className="mt-5 px-4 flex items-center justify-between w-full text-gray-500 font-medium text-xs">
+{/*               <div className="mt-5 px-4 flex items-center justify-between w-full text-gray-500 font-medium text-xs">
                 <span>니꼬</span>
                 <span>18시간 전</span>
-              </div>
+              </div> */}
             </a>
           </Link>
         ))}
       </div>
           ) : null}
           {method === "done" ? (
-            <p>
-            완료된 목록
-            </p>
+        <div className="space-y-4">
+        {[1, 2, 3, 4].map((_, i) => (
+        <Link key={i} href={`/community/${i}`}>
+            <a className="flex cursor-pointer flex-col pt-4 items-start">
+              <div className="mt-2 px-4 flex flex-row text-slate-800">
+                <div className="w-8 h-8 bg-slate-400 rounded-full"></div>
+                <span className="mt-1 ml-2 font-bold text-slate-800">미내기</span>                    
+                <span className="mt-2.5 ml-1 text-xs text-slate-400">님 과의</span>
+                <span className="mt-1 ml-1.5 font-medium">약속에 늦지 않기</span>
+                <svg className="w-7 h-7 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+              </div>
+            </a>
+          </Link>
+        ))}
+      </div>
           ) : null}
 {/*           {method === "doing" ? <p>doing</p> : null}
           {method === "done" ? (<p>done</p>) : null} */}

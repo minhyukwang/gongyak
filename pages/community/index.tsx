@@ -1,62 +1,40 @@
 import type { NextPage } from "next";
 import Link from "next/link";
-
+import TextArea from "../components/textarea";
 import Layout from "../components/layout";
 
 const Community: NextPage = () => {
   return (
-    <Layout hasTabBar title="동네생활">
-      <div className="space-y-4 divide-y-[2px]">
-        {[1, 2, 3, 4, 5, 6].map((_, i) => (
+    <Layout hasTabBar>
+      <div className="flex">
+        <div className="w-4/5 ml-6">
+        <TextArea
+            name="search"
+            placeholder=""
+            required
+          />
+        </div>
+          <button className="ml-2">
+          <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+          </button>
+      </div>
+      <div className="-mt-3 ml-1 -space-y-4 text-lg">
+        {[1, 2, 3, 4].map((_, i) => (
           <Link key={i} href={`/community/${i}`}>
             <a className="flex cursor-pointer flex-col pt-4 items-start">
-              <span className="flex ml-4 items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-800">
-                동네질문
-              </span>
-              <div className="mt-2 px-4 text-gray-700">
-                <span className="text-green-500 font-medium">Q.</span> What is
-                the best mandu restaurant?
+            <div className="mt-2 px-4 flex flex-row text-slate-800">  
+            <span className="mt-1 ml-1.5 font-medium">일주일 동안 새벽 6시에 일어나기</span>                  
+                <span className="mt-2.5 ml-1 text-xs text-slate-400">hot 🔥</span>
               </div>
-              <div className="mt-5 px-4 flex items-center justify-between w-full text-gray-500 font-medium text-xs">
-                <span>니꼬</span>
-                <span>18시간 전</span>
-              </div>
-              <div className="flex px-4 space-x-5 mt-3 text-gray-700 py-2.5 border-t   w-full">
-                <span className="flex space-x-2 items-center text-sm">
-                  <svg
-                    className="w-4 h-4"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
-                    ></path>
-                  </svg>
-                  <span>궁금해요 1</span>
-                </span>
-                <span className="flex space-x-2 items-center text-sm">
-                  <svg
-                    className="w-4 h-4"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"
-                    ></path>
-                  </svg>
-                  <span>답변 1</span>
-                </span>
-              </div>
+            </a>
+          </Link>
+        ))}
+      </div>
+      <div className="ml-7 mr-7 mt-4 columns-2">
+        {[1, 2, 3, 4].map((_, i) => (
+          <Link key={i} href={`/community/${i}`}>
+            <a className="flex cursor-pointer pt-3">
+            <div className="h-52 w-52 bg-slate-400"></div>
             </a>
           </Link>
         ))}
