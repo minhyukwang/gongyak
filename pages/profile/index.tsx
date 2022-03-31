@@ -151,7 +151,7 @@ const Profile: NextPage = () => {
           </Link>
           </div>
         <div className="mt-6 ml-4 flex items-start overflow-y-auto">
-        <Link href="/profile/loved">
+        <Link href="/profile/withfriend">
             <a className="flex flex-col">
               <div className="flex flex-row">
             <span className="ml-3 mt-2 mr-2 text-xs font-medium text-slate-400">
@@ -170,7 +170,7 @@ const Profile: NextPage = () => {
           </Link>
           </div>
         <div className="mt-6 flex justify-around -ml-20">
-        <Link href="/profile/loved">
+        <Link href="/profile/interested">
             <a className="flex flex-col items-center">
             <span className="text-xs mt-2 font-medium text-slate-400">
                 관심공약
@@ -188,7 +188,7 @@ const Profile: NextPage = () => {
               </div>
             </a>
           </Link>
-          <Link href="/profile/sold">
+          <Link href="/profile/certificate">
             <a className="flex flex-col items-center">
             <span className="text-xs mt-2 font-medium text-slate-400">
                 인증서발급
