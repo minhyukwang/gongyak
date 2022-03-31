@@ -5,7 +5,7 @@ import Layout from "../components/layout";
 
 const Community: NextPage = () => {
   return (
-    <Layout hasTabBar canGoBack>
+    <Layout canGoBack>
       <div className="flex">
         <div className="w-4/5 ml-6">
         <TextArea
@@ -31,8 +31,8 @@ const Community: NextPage = () => {
           <Link key={i} href={`/community/${i}`}>
             <a className="flex cursor-pointer flex-col pt-4 items-start">
             <div className="mt-2 px-4 flex flex-row text-slate-800">  
-            <span className="mt-1 ml-1.5 font-medium">일주일 동안 새벽 6시에 일어나기</span>                  
-                <span className="mt-2.5 ml-1 text-xs text-slate-400">hot 🔥</span>
+            <span className="mt-1 ml-1.5 font-medium">매일 러닝 하기</span>                  
+                <span className="mt-2.5 ml-1 text-xs text-slate-400"></span>
               </div>
             </a>
           </Link>

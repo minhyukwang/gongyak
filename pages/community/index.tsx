@@ -5,7 +5,7 @@ import Layout from "../components/layout";
 const Community: NextPage = () => {
   return (
     <Layout hasTabBar>
-      <Link href="community/search">
+      <Link href="/community/search">
       <div className="flex">
         <div className="w-4/5 ml-6">
         <div className="h-10 w-full border-2 rounded-md border-slate-500 hover:border-slate-800 cursor-pointer"></div>
@@ -17,7 +17,7 @@ const Community: NextPage = () => {
       </Link>
       <div className="-mt-3 ml-1 -space-y-4 text-lg">
         {[1, 2, 3, 4].map((_, i) => (
-          <Link key={i} href={`/community/${i}`}>
+          <Link key={i} href="/community/tag">
             <a className="flex cursor-pointer flex-col pt-4 items-start">
             <div className="mt-2 px-4 flex flex-row text-slate-800">  
             <span className="mt-1 ml-1.5 font-medium">일주일 동안 새벽 6시에 일어나기</span>                  
