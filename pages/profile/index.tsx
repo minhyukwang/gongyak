@@ -108,7 +108,7 @@ const Profile: NextPage = () => {
             </div>
         </div>
         <div className="mt-6 flex justify-around">
-        <Link href="/profile/loved">
+        <Link href="/list">
             <a className="flex flex-col items-center">
             <span className="text-xs mt-2 font-medium text-slate-400">
                 지킨 공약 / 총 공약
@@ -161,7 +161,7 @@ const Profile: NextPage = () => {
               </div>
               <div className="mt-4 px-4 flex flex-row">
                 <div className="w-8 h-8 bg-slate-400 rounded-full"></div>
-                <span className="mt-1 ml-2 font-bold text-slate-800">윤이</span>                    
+                <span className="mt-1 ml-2 font-bold text-slate-800">연이</span>                    
                 <span className="mt-2.5 ml-1 text-xs text-slate-400">님이</span>
                 <span className="mt-1 ml-1.5 font-medium">매일 밤 독서</span>
                 <span className="mt-2.5 ml-1 text-xs text-slate-400">를 제안하였습니다</span>

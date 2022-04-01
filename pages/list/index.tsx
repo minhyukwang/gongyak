@@ -39,7 +39,7 @@ const List: NextPage = () => {
         {method === "doing" ? (
         <div className="space-y-4">
         {[1, 2, 3, 4].map((_, i) => (
-        <Link key={i} href={`/community/${i}`}>
+        <Link key={i} href="/list/ing">
             <a className="flex cursor-pointer flex-col pt-4 items-start">
 {/*               <span className="flex ml-4 items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-800">
                 동네질문
@@ -62,7 +62,7 @@ const List: NextPage = () => {
           {method === "done" ? (
         <div className="space-y-4">
         {[1, 2, 3, 4].map((_, i) => (
-        <Link key={i} href={`/community/${i}`}>
+        <Link key={i} href="/list/ing">
             <a className="flex cursor-pointer flex-col pt-4 items-start">
               <div className="mt-2 px-4 flex flex-row text-slate-800">
                 <div className="w-8 h-8 bg-slate-400 rounded-full"></div>
