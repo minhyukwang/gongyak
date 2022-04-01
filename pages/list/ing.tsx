@@ -5,18 +5,19 @@ import Layout from "../components/layout";
 const Upload: NextPage = () => {
   return (
     <Layout canGoBack>
-    <div className="mt-4 ml-8 flex">
-        <div className="w-10 h-10 bg-slate-500 rounded-full ring ring-slate-800 ring-offset-2 " />
+    <div className="flex flex-row">
+      <div className="mt-4 ml-8 flex">
+        <div className="w-11 h-11 bg-slate-400 rounded-full ring ring-slate-800 ring-offset-2 " />
         <div className="flex flex-col -space-y-1">
             <span className="ml-4 text-lg font-bold text-slate-800">미내기</span>
             <span className="ml-4 text-xs text-slate-400">@minaek</span>
         </div>
-        <div className="ml-[280px]">
-        <svg className="w-10 h-10" 
-             fill="none" 
-             stroke="currentColor" 
-             viewBox="0 0 24 24" 
-             xmlns="http://www.w3.org/2000/svg">
+        <div className="ml-4">
+        <svg className="w-11 h-11" 
+            fill="none" 
+            stroke="currentColor" 
+            viewBox="0 0 24 24" 
+            xmlns="http://www.w3.org/2000/svg">
         <path strokeLinecap="round" 
               strokeLinejoin="round" 
               strokeWidth="2" 
@@ -29,9 +30,32 @@ const Upload: NextPage = () => {
         </path>
         </svg>
         </div>
+        </div>
+        <div className="mt-4 ml-20 flex">
+        <div className="w-12 h-12 bg-slate-400 rounded-full " />
+        <div className="flex flex-col -space-y-1">
+            <span className="ml-4 text-lg font-bold text-slate-800">인영</span>
+            <span className="ml-4 text-xs text-slate-400">@inyoung</span>
+        </div>
+        <div className="ml-4">
+        <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path></svg>
+        </div>
+        </div>
     </div>
-      <form className="p-4 space-y-4">
-        <div>
+    <div className="mt-7 ml-4">
+        <span className="ml-4 font-medium text-lg">약속에 늦지 않기</span>
+        <span className="ml-0.5 text-sm text-slate-600">를 도전합니다!</span>
+        </div>
+        <div className="mt-4 ml-4">
+        <span className="ml-4 mr-2 font-medium text-lg">시작일</span>
+        <span className="text-slate-600">2022년 04월 02일</span>
+        </div>
+        <div className="ml-4">
+        <span className="ml-4 mr-2 font-medium text-lg">종료일</span>
+        <span className="text-slate-600">2022년 04월 02일</span>
+        </div>
+      <form className="ml-8 mt-6 space-y-4">
+        <div className="mt-2">
           <label className="w-1/2 cursor-pointer text-slate-600 hover:border-slate-800 hover:text-slate-500 flex items-center justify-center border-2 border-dashed border-slate-300 h-48 rounded-md">
             <svg
               className="h-12 w-12"
@@ -50,8 +74,16 @@ const Upload: NextPage = () => {
             <input className="hidden" type="file" />
           </label>
         </div>
-        <Button text="뭐하지??내용미정" />
       </form>
+      <div className="mt-8 flex justify-around">
+      <button className="flex flex-row justify-around text-slate-700 hover:border-slate-900 hover:text-slate-900">
+      <svg className="w-10 h-10" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clipRule="evenodd"></path></svg>
+      <svg className="w-10 h-10" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M18 10c0 3.866-3.582 7-8 7a8.841 8.841 0 01-4.083-.98L2 17l1.338-3.123C2.493 12.767 2 11.434 2 10c0-3.866 3.582-7 8-7s8 3.134 8 7zM7 9H5v2h2V9zm8 0h-2v2h2V9zM9 9h2v2H9V9z" clipRule="evenodd"></path></svg>
+      </button>
+      <div>
+      <Button text="뭐하지??내용미정" />
+      </div>
+      </div>
     </Layout>
   );
 };
