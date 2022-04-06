@@ -2,7 +2,7 @@ import { NextPage } from 'next';
 import Layout from "../components/layout";
 
 
-const Write: NextPage = () => {
+const Certificate: NextPage = () => {
     return (
         <Layout canGoBack>
         <div className="flex justify-center mt-10">
@@ -40,4 +40,4 @@ const Write: NextPage = () => {
     )
 };
 
-export default Write;
+export default Certificate;

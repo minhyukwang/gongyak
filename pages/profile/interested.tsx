@@ -2,7 +2,7 @@ import { NextPage } from 'next';
 import Layout from "../components/layout";
 import Link from "next/link";
 
-const Write: NextPage = () => {
+const Interested: NextPage = () => {
     return (
         <Layout canGoBack>
         <div className="space-y-1">
@@ -23,5 +23,5 @@ const Write: NextPage = () => {
     )
 };
 
-export default Write;
+export default Interested;
 
