@@ -2,10 +2,13 @@ import type { NextPage } from "next";
 import Button from "../components/button";
 import Input from "../components/input";
 import Layout from "../components/layout";
+import Link from "next/link";
 import TextArea from "../components/textarea";
+import { withRouter } from "next/router";
 
-const Upload: NextPage = () => {
+function TimeLineDetail({ router: { query } }) {
   return (
+    //TODO: 진행중인 공약 , 완료된 공약, Route 처리
     <Layout canGoBack title="">
       <div className="mt-4 ml-8 flex">
         <div className="h-10 w-10 rounded-full bg-slate-500 ring ring-slate-800 ring-offset-2 " />
@@ -56,11 +59,11 @@ const Upload: NextPage = () => {
       </div>
       <div className="ml-7 mr-7 mt-4 columns-2">
         {[1, 2, 3, 4].map((_, i) => (
-          // <Link key={i} href={`/community/${i}`}>
-          <a className="flex cursor-pointer pt-3">
-            <div className="h-56 w-56 bg-slate-400"></div>
-          </a>
-          // </Link>
+          <Link key={i} href={`/pictures/${i}`}>
+            <a className="flex cursor-pointer pt-3">
+              <div className="h-56 w-56 bg-slate-400"></div>
+            </a>
+          </Link>
         ))}
       </div>
       <div className="mt-5 flex h-12 w-full max-w-xl  items-center justify-center bg-white px-2 text-lg  font-medium text-gray-800">
@@ -96,93 +99,46 @@ const Upload: NextPage = () => {
             />
           </svg>
         </div>
-        <div className="w-12">
-          <svg
-            className="h-6 w-6"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"
-            />
-          </svg>
-        </div>
-        <div className="flex h-10 w-52 items-center justify-center  rounded-md bg-slate-800">
-          <span className="text-sm text-slate-200">이 공약</span>
-          <svg
-            className="h-6 w-6"
-            fill="none"
-            stroke="white"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"
-            />
-          </svg>
-        </div>
-      </div>
-      {/* <div className="space-y-4 p-4">
-        <label className="flex h-48 w-full cursor-pointer items-center justify-center rounded-md border-2 border-dashed border-gray-300 text-gray-600 hover:border-green-500 hover:text-green-500">
-          <svg
-            className="h-12 w-12"
-            stroke="currentColor"
-            fill="none"
-            viewBox="0 0 48 48"
-            aria-hidden="true"
-          >
-            <path
-              d="M28 8H12a4 4 0 00-4 4v20m32-12v8m0 0v8a4 4 0 01-4 4H12a4 4 0 01-4-4v-4m32-4l-3.172-3.172a4 4 0 00-5.656 0L28 28M8 32l9.172-9.172a4 4 0 015.656 0L28 28m0 0l4 4m4-24h8m-4-4v8m-12 4h.02"
-              strokeWidth={2}
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-          </svg>
-          <input className="hidden" type="file" />
-        </label>
-      </div> */}
-      <form className="space-y-4 p-4">
-        {/* <div>
-          <label className="flex h-48 w-full cursor-pointer items-center justify-center rounded-md border-2 border-dashed border-gray-300 text-gray-600 hover:border-green-500 hover:text-green-500">
+        <Link href={`/timelines/comment`}>
+          <div className="w-12 cursor-pointer">
             <svg
-              className="h-12 w-12"
-              stroke="currentColor"
+              className="h-6 w-6"
               fill="none"
-              viewBox="0 0 48 48"
-              aria-hidden="true"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                d="M28 8H12a4 4 0 00-4 4v20m32-12v8m0 0v8a4 4 0 01-4 4H12a4 4 0 01-4-4v-4m32-4l-3.172-3.172a4 4 0 00-5.656 0L28 28M8 32l9.172-9.172a4 4 0 015.656 0L28 28m0 0l4 4m4-24h8m-4-4v8m-12 4h.02"
-                strokeWidth={2}
                 strokeLinecap="round"
                 strokeLinejoin="round"
+                strokeWidth={2}
+                d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"
               />
             </svg>
-            <input className="hidden" type="file" />
-          </label>
-        </div> */}
-        {/* <Input required label="Name" name="name" type="text" />
-        <Input
-          required
-          label="Price"
-          placeholder="0.00"
-          name="price"
-          type="text"
-          kind="price"
-        />
-        <TextArea name="description" label="Description" />
-        <Button text="Upload item" /> */}
-      </form>
+          </div>
+        </Link>
+        <Link href={`/timelines/write`}>
+          <div className="flex h-10 w-52 cursor-pointer items-center  justify-center rounded-md bg-slate-800">
+            <span className="text-sm text-slate-200">이 공약 &nbsp;</span>
+            <svg
+              className="h-6 w-6"
+              fill="none"
+              stroke="white"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"
+              />
+            </svg>
+          </div>
+        </Link>
+      </div>
+      <form className="space-y-4 p-4"></form>
     </Layout>
   );
-};
-
-export default Upload;
+}
+export default withRouter(TimeLineDetail);
