@@ -5,7 +5,7 @@ import Layout from "../components/layout";
 import { useState } from "react";
 import { cls } from "../libs/utils";
 
-const Community: NextPage = () => {
+const Search: NextPage = () => {
   const [method, setMethod] = useState<"doing" | "done">("doing");
   const onDoingClick = () => setMethod("doing");
   const onDoneClick = () => setMethod("done");
@@ -64,7 +64,7 @@ const Community: NextPage = () => {
         {method === "doing" ? (
           <div className="-mt-2 -space-y-2">
             {[1, 2, 3, 4].map((_, i) => (
-              <Link key={i} href={`/community/${i}`}>
+              <Link key={i} href={`/search/${i}`}>
                 <a className="flex cursor-pointer flex-col items-start pt-4">
                   <div className="mt-2 flex flex-row px-4 text-slate-800">
                     <span className="mt-1 ml-1.5 font-medium">
@@ -80,7 +80,7 @@ const Community: NextPage = () => {
         {method === "done" ? (
           <div className="-mt-2 -space-y-2">
             {[1, 2, 3, 4].map((_, i) => (
-              <Link key={i} href={`/community/${i}`}>
+              <Link key={i} href={`/search/${i}`}>
                 <a className="flex cursor-pointer flex-col items-start pt-4">
                   <div className="mt-2 flex flex-row px-4 text-slate-800">
                     <span className="mt-1 ml-1.5 font-medium">
@@ -96,7 +96,7 @@ const Community: NextPage = () => {
       </div>
       <div className="ml-7 mr-7 mt-3 columns-2">
         {[1, 2, 3, 4].map((_, i) => (
-          <Link key={i} href={`/community/${i}`}>
+          <Link key={i} href={`/search/${i}`}>
             <a className="flex cursor-pointer pt-3">
               <div className="h-52 w-52 bg-slate-400"></div>
             </a>
@@ -107,4 +107,4 @@ const Community: NextPage = () => {
   );
 };
 
-export default Community;
+export default Search;

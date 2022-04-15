@@ -11,11 +11,17 @@ function TimeLineDetail({ router: { query } }) {
     //TODO: 진행중인 공약 , 완료된 공약, Route 처리
     <Layout canGoBack hasHeader="true">
       <div className="mt-4 ml-8 flex">
-        <div className="h-10 w-10 rounded-full bg-slate-500 ring ring-slate-800 ring-offset-2 " />
-        <div className="flex flex-col -space-y-1">
-          <span className="ml-4 text-lg font-bold text-slate-800">미내기</span>
-          <span className="ml-4 text-xs text-slate-400">@minaek</span>
-        </div>
+        <Link href="/profile">
+          <div className="h-10 w-10 cursor-pointer rounded-full bg-slate-500 ring ring-slate-800 ring-offset-2 " />
+        </Link>
+        <Link href="/profile">
+          <div className="flex cursor-pointer flex-col -space-y-1">
+            <span className="ml-4 text-lg font-bold text-slate-800">
+              미내기
+            </span>
+            <span className="ml-4 text-xs text-slate-400">@minaek</span>
+          </div>
+        </Link>
         <div className="ml-[280px]">
           <svg
             className="h-10 w-10"

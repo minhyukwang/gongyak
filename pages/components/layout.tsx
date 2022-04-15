@@ -44,41 +44,48 @@ export default function Layout({
           "fixed flex h-12 w-full max-w-xl items-center bg-white px-2 text-lg font-medium text-gray-800"
         )}
       >
+        {/*
+         ************************************채팅, 글쓰기 이미지 ************************************
+         */}
         {!canGoBack ? (
           <div className="-mt-7 ">
-            <button onClick={onClick} className="absolute right-14">
-              <svg
-                className="h-7 w-7"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"
-                ></path>
-              </svg>
-            </button>
-            <button onClick={onClick} className="absolute right-4 ">
-              <svg
-                transform="rotate(45)"
-                className="h-6 w-6"
-                fill="none"
-                stroke="navy"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"
-                ></path>
-              </svg>
-            </button>
+            <Link href="/timelines/write">
+              <button className="absolute right-14">
+                <svg
+                  className="h-7 w-7"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"
+                  ></path>
+                </svg>
+              </button>
+            </Link>
+            <Link href="/chats">
+              <button className="absolute right-4 ">
+                <svg
+                  transform="rotate(45)"
+                  className="h-6 w-6"
+                  fill="none"
+                  stroke="navy"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"
+                  ></path>
+                </svg>
+              </button>
+            </Link>
           </div>
         ) : null}
         {canGoBack ? (
@@ -155,11 +162,11 @@ export default function Layout({
               </svg>
             </a>
           </Link>
-          <Link href="/community">
+          <Link href="/search">
             <a
               className={cls(
                 "flex flex-col items-center space-y-2 ",
-                router.pathname === "/community"
+                router.pathname === "/search"
                   ? "text-slate-900"
                   : "transition-colors hover:text-gray-500"
               )}

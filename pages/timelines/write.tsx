@@ -7,7 +7,7 @@ import Link from "next/link";
 
 const Write: NextPage = () => {
   return (
-    <Layout canGoBack hasShare="true">
+    <Layout canGoBack hasShare>
       <div className="mt-4 ml-8 flex">
         <div className="h-10 w-10 rounded-full bg-slate-500 ring ring-slate-800 ring-offset-2 " />
         <div className="flex flex-col -space-y-1">
