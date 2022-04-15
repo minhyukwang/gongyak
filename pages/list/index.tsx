@@ -11,7 +11,7 @@ const List: NextPage = () => {
   const onDoingClick = () => setStatus("doing");
   const onDoneClick = () => setStatus("done");
   return (
-    <Layout hasTabBar title="">
+    <Layout hasTabBar>
       <div className="mt-8 grid w-full grid-cols-2">
         <button
           className={cls(
@@ -48,6 +48,7 @@ const List: NextPage = () => {
               comment={"new🎉"}
               hearts={1}
               status={status}
+              path={"list"}
             />
           ))}
         </div>

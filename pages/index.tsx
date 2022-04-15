@@ -5,8 +5,8 @@ import Layout from "./components/layout";
 
 const Home: NextPage = () => {
   return (
-    <Layout title="pledge" hasTabBar>
-      <div className="mt-4 flex items-center justify-center">
+    <Layout hasTitle hasTabBar hasHeader>
+      <div className="mt-4 flex items-center justify-center ">
         <div className="h-10 w-10 rounded-full bg-slate-500 ring ring-slate-800 ring-offset-2 " />
       </div>
       <div className="mt-4 flex items-center justify-center">
@@ -21,7 +21,7 @@ const Home: NextPage = () => {
           </div>
         </div>
       </div>
-      <div className="flex flex-col space-y-5">
+      <div className="flex flex-col space-y-5 ">
         {[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1].map((_, i) => (
           <TimeLine
             id={i}
@@ -31,6 +31,7 @@ const Home: NextPage = () => {
             userId={"@bboo.oodd"}
             comment={"new🎉"}
             hearts={1}
+            path={"timelines"}
           />
         ))}
       </div>

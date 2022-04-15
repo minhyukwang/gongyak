@@ -7,15 +7,12 @@ import Link from "next/link";
 
 const Write: NextPage = () => {
   return (
-    <Layout canGoBack title="">
+    <Layout canGoBack hasShare="true">
       <div className="mt-4 ml-8 flex">
         <div className="h-10 w-10 rounded-full bg-slate-500 ring ring-slate-800 ring-offset-2 " />
         <div className="flex flex-col -space-y-1">
           <span className="ml-4 text-lg font-bold text-slate-800">미내기</span>
           <span className="ml-4 text-xs text-slate-400">@minaek</span>
-        </div>
-        <div className="float-right ml-56 mr-8 w-20">
-          <Button text="완료" />
         </div>
       </div>
       <div className="mt-4 ml-8 space-y-4">

@@ -8,6 +8,7 @@ interface TimeLineProps {
   comment: string;
   hearts: number;
   status: string;
+  path: string;
 }
 
 export default function TimeLine({
@@ -18,10 +19,16 @@ export default function TimeLine({
   hearts,
   id,
   status,
+  path,
 }: TimeLineProps) {
   return (
-    <Link href={{ pathname: `/timelines/${id}`, query: { status: status } }}>
-      <a className="flex cursor-pointer justify-between px-4 pt-5">
+    <Link
+      href={{
+        pathname: path === undefined ? "" : `/${path}/${id}`,
+        query: { status: status },
+      }}
+    >
+      <a className="flex cursor-pointer justify-between px-4 pt-5 ">
         <div className="flex space-x-4">
           <div className="mt-2 h-14 w-14 rounded-full bg-gray-400" />
           <div className="flex flex-col pt-2">

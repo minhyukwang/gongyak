@@ -6,7 +6,7 @@ import Link from "next/link";
 import TextArea from "../components/textarea";
 import { withRouter } from "next/router";
 
-function TimeLineDetail({ router: { query } }) {
+function ListDetail({ router: { query } }) {
   return (
     //TODO: 진행중인 공약 , 완료된 공약, Route 처리
     <Layout canGoBack hasHeader="true">
@@ -141,4 +141,4 @@ function TimeLineDetail({ router: { query } }) {
     </Layout>
   );
 }
-export default withRouter(TimeLineDetail);
+export default withRouter(ListDetail);
