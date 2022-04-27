@@ -6,6 +6,7 @@ import Layout from "./components/layout";
 const Home: NextPage = () => {
   return (
     <Layout hasTitle hasTabBar hasHeader>
+      <div className="scrollbar-hide "> 
       <div className="mt-4 flex items-center justify-center ">
         <div className="h-10 w-10 rounded-full bg-slate-500 ring ring-slate-800 ring-offset-2 " />
       </div>
@@ -34,6 +35,7 @@ const Home: NextPage = () => {
             path={"timelines"}
           />
         ))}
+      </div>
       </div>
     </Layout>
   );
