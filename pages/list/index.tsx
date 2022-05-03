@@ -11,7 +11,8 @@ const List: NextPage = () => {
   const onDoingClick = () => setStatus("doing");
   const onDoneClick = () => setStatus("done");
   return (
-    <Layout hasTabBar>
+    <div className="scrollbar-hide">
+    <Layout hasTabBar>      
       <div className="mt-8 grid w-full grid-cols-2">
         <button
           className={cls(
@@ -69,8 +70,9 @@ const List: NextPage = () => {
             d="M12 6v6m0 0v6m0-6h6m-6 0H6"
           />
         </svg>
-      </FloatingButton>
+      </FloatingButton>      
     </Layout>
+    </div>
   );
 };
 
