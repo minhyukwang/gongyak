@@ -8,7 +8,7 @@ import Link from "next/link";
 const Write: NextPage = () => {
   return (
     <Layout canGoBack hasShare>
-      <div className="mt-4 ml-8 flex">
+      <div className="mt-4 ml-8 flex  pt-20">
         <div className="h-10 w-10 rounded-full bg-slate-500 ring ring-slate-800 ring-offset-2 " />
         <div className="flex flex-col -space-y-1">
           <span className="ml-4 text-lg font-bold text-slate-800">미내기</span>

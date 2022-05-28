@@ -10,7 +10,7 @@ function TimeLineDetail({ router: { query } }) {
   return (
     //TODO: 진행중인 공약 , 완료된 공약, Route 처리
     <Layout canGoBack hasHeader="true">
-      <div className="mt-4 ml-8 flex">
+      <div className="ml-8 flex pt-20">
         <Link href="/profile">
           <div className="h-10 w-10 cursor-pointer rounded-full bg-slate-500 ring ring-slate-800 ring-offset-2 " />
         </Link>
@@ -63,7 +63,7 @@ function TimeLineDetail({ router: { query } }) {
           <span className="text-xs text-slate-400">2022년 03월 25일</span>
         </p>
       </div>
-      <div className="ml-7 mr-7 mt-4 columns-2">
+      <div className="ml-7 mr-7 mt-4 mb-16 columns-2">
         {[1, 2, 3, 4].map((_, i) => (
           <Link key={i} href={`/pictures/${i}`}>
             <a className="flex cursor-pointer pt-3">
@@ -72,7 +72,7 @@ function TimeLineDetail({ router: { query } }) {
           </Link>
         ))}
       </div>
-      <div className="mt-5 flex h-12 w-full max-w-xl  items-center justify-center bg-white px-2 text-lg  font-medium text-gray-800">
+      <div className="fixed bottom-0 flex h-12 w-full max-w-xl items-center  justify-center bg-white px-2 pt-5 pb-10  text-lg font-medium text-gray-800">
         <div className="w-12">
           <svg
             className="h-6 w-6"

@@ -1,6 +1,7 @@
 import type { NextPage } from "next";
 import Button from "../components/button";
 import Layout from "../components/layout";
+import Link from "next/link";
 
 const Upload: NextPage = () => {
   return (
@@ -94,8 +95,8 @@ const Upload: NextPage = () => {
           </label>
         </div>
       </form>
-      <div className="mt-8 flex justify-around">
-        <button className="flex flex-row justify-around text-slate-700 hover:border-slate-900 hover:text-slate-900">
+      <div className="fixed bottom-0 mt-8 flex w-full justify-center gap-x-3 pl-10 pr-10 pb-2">
+        <button>
           <svg
             className="h-10 w-10"
             fill="currentColor"
@@ -108,20 +109,24 @@ const Upload: NextPage = () => {
               clipRule="evenodd"
             ></path>
           </svg>
-          <svg
-            className="h-10 w-10"
-            fill="currentColor"
-            viewBox="0 0 20 20"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              fillRule="evenodd"
-              d="M18 10c0 3.866-3.582 7-8 7a8.841 8.841 0 01-4.083-.98L2 17l1.338-3.123C2.493 12.767 2 11.434 2 10c0-3.866 3.582-7 8-7s8 3.134 8 7zM7 9H5v2h2V9zm8 0h-2v2h2V9zM9 9h2v2H9V9z"
-              clipRule="evenodd"
-            ></path>
-          </svg>
         </button>
-        <div>
+        <Link href="/chats/1">
+          <button>
+            <svg
+              className="h-10 w-10"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fillRule="evenodd"
+                d="M18 10c0 3.866-3.582 7-8 7a8.841 8.841 0 01-4.083-.98L2 17l1.338-3.123C2.493 12.767 2 11.434 2 10c0-3.866 3.582-7 8-7s8 3.134 8 7zM7 9H5v2h2V9zm8 0h-2v2h2V9zM9 9h2v2H9V9z"
+                clipRule="evenodd"
+              ></path>
+            </svg>
+          </button>
+        </Link>
+        <div className="w-1/2">
           <Button text="뭐하지??내용미정" />
         </div>
       </div>
