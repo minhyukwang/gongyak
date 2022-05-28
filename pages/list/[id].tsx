@@ -6,7 +6,7 @@ import Link from "next/link";
 const Upload: NextPage = () => {
   return (
     <Layout canGoBack>
-      <div className="flex flex-row">
+      <div className="flex flex-row pt-20">
         <div className="mt-4 ml-8 flex">
           <div className="h-11 w-11 rounded-full bg-slate-400 ring ring-slate-800 ring-offset-2 " />
           <div className="flex flex-col -space-y-1">
