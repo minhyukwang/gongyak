@@ -3,7 +3,7 @@ import Link from "next/link";
 import FloatingButton from "../components/floating-button";
 import Layout from "../components/layout";
 import { useState } from "react";
-import { cls } from "../libs/utils";
+import { cls } from "../libs/client/utils";
 import TimeLine from "../components/timeline";
 
 const List: NextPage = () => {

@@ -1,4 +1,4 @@
-import { cls } from "../libs/utils";
+import { cls } from "../../libs/client/utils";
 
 interface ButtonProps {
   large?: boolean;
@@ -16,7 +16,7 @@ export default function Button({
     <button
       {...rest}
       className={cls(
-        "w-full bg-slate-700 hover:bg-slate-800 text-slate-100  px-4 border border-transparent rounded-md shadow-sm font-medium focus:ring-2 focus:ring-offset-2 focus:ring-slate-600 focus:outline-none",
+        "w-full rounded-md border border-transparent  bg-slate-700 px-4 font-medium text-slate-100 shadow-sm hover:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-slate-600 focus:ring-offset-2",
         large ? "py-3 text-base" : "py-2 text-sm "
       )}
     >
