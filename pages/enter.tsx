@@ -1,10 +1,20 @@
-import type { NextPage } from "next";
+import type {
+  NextApiHandler,
+  NextApiRequest,
+  NextApiResponse,
+  NextPage,
+} from "next";
 import { useState } from "react";
-import Button from "./components/button";
+import Button from "@components/button";
 import { useForm } from "react-hook-form";
-import Input from "./components/input";
-import useMutation from "../libs/client/useMutation";
-import { cls } from "../libs/client/utils";
+import Input from "@components/input";
+import useMutation from "@libs/client/useMutation";
+import { cls } from "@libs/client/utils";
+
+async function handler(req: NextApiRequest, res: NextApiResponse) {
+  console.log(req.body);
+  res.status(200).end();
+}
 
 interface EnterForm {
   email?: string;

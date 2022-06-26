@@ -1,10 +1,10 @@
 import type { NextPage } from "next";
 import Link from "next/link";
-import FloatingButton from "../components/floating-button";
-import Layout from "../components/layout";
+import FloatingButton from "@components/floating-button";
+import Layout from "@components/layout";
 import { useState } from "react";
-import { cls } from "../libs/client/utils";
-import TimeLine from "../components/timeline";
+import { cls } from "@libs/client/utils";
+import TimeLine from "@components/timeline";
 
 const List: NextPage = () => {
   const [status, setStatus] = useState<"doing" | "done">("doing");

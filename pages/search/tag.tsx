@@ -1,9 +1,9 @@
 import type { NextPage } from "next";
 import Link from "next/link";
-import TextArea from "../components/textarea";
-import Layout from "../components/layout";
+import TextArea from "@components/textarea";
+import Layout from "@components/layout";
 import { useState } from "react";
-import { cls } from "../libs/client/utils";
+import { cls } from "@libs/client/utils";
 
 const Search: NextPage = () => {
   const [method, setMethod] = useState<"doing" | "done">("doing");
