@@ -26,7 +26,7 @@ interface MutationResult {
 
 const Enter: NextPage = () => {
   const [enter, { loading, data, error }] =
-    useMutation<EnterMutaionResult>("/api/users/enter");
+    useMutation<MutationResult>("/api/users/enter");
   const [confirmToken, { loading: tokenLoading, data: tokenData }] =
     useMutation<MutationResult>("/api/users/confirm");
   const { register, handleSubmit, reset } = useForm<EnterForm>();
