@@ -32,7 +32,7 @@ export default function Layout({
   return (
     <div>
       <Head>
-        <title>{seoTitle} | Pledge </title>
+        <title>Pledge </title>
       </Head>
 
       {/*
