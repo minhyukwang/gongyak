@@ -6,7 +6,8 @@ import useUser from "@libs/client/useUser";
 import Head from "next/head";
 
 const Home: NextPage = () => {
-  const user = useUser();
+  const { user, isLoading } = useUser();
+
   console.log(user);
   return (
     <Layout hasTitle hasTabBar hasHeader>
@@ -20,17 +21,17 @@ const Home: NextPage = () => {
         <div className="mt-4 flex items-center justify-center">
           <div className="h-24 w-80 rounded-md bg-slate-800 ">
             <div className="ml-[140px] -mt-2 h-2 w-2 border-t-[8px] border-b-[6px] border-r-[16px] border-t-transparent border-b-transparent border-r-slate-800 "></div>
-            <div className="flex flex-col items-center justify-center -space-y-1">
-              {[1, 1, 1, 1].map((_, i) => (
+            {/* <div className="flex flex-col items-center justify-center -space-y-1">
+              {[1, 2, 3, 4].map((_, i) => (
                 <p className="text-m font-['Helvetica'] text-slate-200" key="i">
                   한글 글씨체 적용되는걸로 해야 됨
                 </p>
               ))}
-            </div>
+            </div> */}
           </div>
         </div>
-        <div className="flex flex-col space-y-5 ">
-          {[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1].map((_, i) => (
+        {/* <div className="flex flex-col space-y-5 ">
+          {[1, 2, 3, 4].map((_, i) => (
             <TimeLine
               id={i}
               key={i}
@@ -42,7 +43,24 @@ const Home: NextPage = () => {
               path={"timelines"}
             />
           ))}
-        </div>
+        </div> */}
+        <FloatingButton href="/pledges/upload">
+          <svg
+            className="h-6 w-6"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            aria-hidden="true"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              d="M12 6v6m0 0v6m0-6h6m-6 0H6"
+            />
+          </svg>
+        </FloatingButton>
       </div>
     </Layout>
   );
