@@ -2,10 +2,17 @@ import type { NextPage } from "next";
 import FloatingButton from "@components/floating-button";
 import TimeLine from "@components/timeline";
 import Layout from "@components/layout";
+import useUser from "@libs/client/useUser";
+import Head from "next/head";
 
 const Home: NextPage = () => {
+  const user = useUser();
+  console.log(user);
   return (
     <Layout hasTitle hasTabBar hasHeader>
+      <Head>
+        <title>Home</title>
+      </Head>
       <div className="pt-12">
         <div className="mt-4 flex items-center justify-center ">
           <div className="h-10 w-10 rounded-full bg-slate-500 ring ring-slate-800 ring-offset-2 " />
